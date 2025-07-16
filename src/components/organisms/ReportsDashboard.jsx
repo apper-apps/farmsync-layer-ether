@@ -162,10 +162,10 @@ const ReportsDashboard = () => {
 </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="space-y-2">
+<div className="space-y-2">
             {fieldStatusData.map((item) => (
               <div key={item.status} className="flex items-center justify-between">
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-2">
                   <div className={`w-4 h-4 rounded-full ${item.color.replace('text-', 'bg-')}`} />
                   <span className="text-sm font-medium">{item.status}</span>
                 </div>
