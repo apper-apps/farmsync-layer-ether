@@ -159,10 +159,10 @@ const ReportsDashboard = () => {
           <CardTitle className="flex items-center">
             <ApperIcon name="PieChart" size={20} className="mr-2 text-accent" />
             Field Status Distribution
-          </CardTitle>
+</CardTitle>
         </CardHeader>
         <CardContent>
-<div className="space-y-3">
+          <div className="space-y-2">
             {fieldStatusData.map((item) => (
               <div key={item.status} className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
@@ -187,10 +187,10 @@ const ReportsDashboard = () => {
           <CardTitle className="flex items-center">
             <ApperIcon name="BarChart3" size={20} className="mr-2 text-accent" />
             Crop Varieties
-          </CardTitle>
+</CardTitle>
         </CardHeader>
         <CardContent>
-<div className="space-y-3">
+          <div className="space-y-2">
             {Object.entries(cropVarieties).map(([variety, count]) => (
               <div key={variety} className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
@@ -217,10 +217,10 @@ const ReportsDashboard = () => {
           <CardTitle className="flex items-center">
             <ApperIcon name="Target" size={20} className="mr-2 text-accent" />
             Task Categories
-          </CardTitle>
+</CardTitle>
         </CardHeader>
         <CardContent>
-<div className="space-y-3">
+          <div className="space-y-2">
             {Object.entries(taskCategories).map(([category, count]) => (
               <div key={category} className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">

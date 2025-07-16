@@ -1,6 +1,6 @@
 import React from "react";
-import { Card, CardContent } from "@/components/atoms/Card";
 import ApperIcon from "@/components/ApperIcon";
+import { Card, CardContent } from "@/components/atoms/Card";
 import { cn } from "@/utils/cn";
 
 const StatCard = ({ 
@@ -15,12 +15,12 @@ const StatCard = ({
   const changeColor = changeType === "positive" ? "text-success" : "text-error";
   const changeIcon = changeType === "positive" ? "TrendingUp" : "TrendingDown";
 
-  return (
+return (
     <Card className={cn("card-hover", className)}>
-<CardContent className="p-5">
+      <CardContent>
         <div className="flex items-center justify-between">
           <div className="flex-1">
-            <p className="text-sm font-medium text-gray-600 mb-0.5">{title}</p>
+            <p className="text-sm font-medium text-gray-600 mb-0">{title}</p>
             <p className={cn(
               "text-2xl font-bold",
               gradient ? "text-gradient" : "text-gray-900"
