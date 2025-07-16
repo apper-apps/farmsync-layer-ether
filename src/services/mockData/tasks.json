@@ -1,0 +1,102 @@
+[
+  {
+    "Id": 1,
+    "title": "Water North Field",
+    "description": "Deep watering for tomatoes and peppers",
+    "dueDate": "2024-06-15",
+    "priority": "high",
+    "category": "watering",
+    "completed": false,
+    "fieldId": 1
+  },
+  {
+    "Id": 2,
+    "title": "Fertilize South Field",
+    "description": "Apply nitrogen fertilizer to corn crop",
+    "dueDate": "2024-06-18",
+    "priority": "medium",
+    "category": "fertilizing",
+    "completed": false,
+    "fieldId": 2
+  },
+  {
+    "Id": 3,
+    "title": "Harvest Wheat",
+    "description": "Complete wheat harvest in East Field",
+    "dueDate": "2024-06-01",
+    "priority": "high",
+    "category": "harvesting",
+    "completed": true,
+    "fieldId": 3
+  },
+  {
+    "Id": 4,
+    "title": "Repair Irrigation System",
+    "description": "Fix broken sprinkler heads in Central Field",
+    "dueDate": "2024-06-20",
+    "priority": "high",
+    "category": "maintenance",
+    "completed": false,
+    "fieldId": 5
+  },
+  {
+    "Id": 5,
+    "title": "Plant Summer Crops",
+    "description": "Plant new lettuce varieties in Upper Field",
+    "dueDate": "2024-06-22",
+    "priority": "medium",
+    "category": "planting",
+    "completed": false,
+    "fieldId": 6
+  },
+  {
+    "Id": 6,
+    "title": "Pest Control Treatment",
+    "description": "Apply organic pest control to cucumber plants",
+    "dueDate": "2024-06-16",
+    "priority": "medium",
+    "category": "maintenance",
+    "completed": false,
+    "fieldId": 1
+  },
+  {
+    "Id": 7,
+    "title": "Soil Testing",
+    "description": "Test soil pH and nutrient levels in West Field",
+    "dueDate": "2024-06-25",
+    "priority": "low",
+    "category": "maintenance",
+    "completed": false,
+    "fieldId": 4
+  },
+  {
+    "Id": 8,
+    "title": "Mulch Application",
+    "description": "Apply organic mulch around tomato plants",
+    "dueDate": "2024-06-14",
+    "priority": "low",
+    "category": "maintenance",
+    "completed": true,
+    "fieldId": 1
+  },
+  {
+    "Id": 9,
+    "title": "Weed Control",
+    "description": "Remove weeds from soybean field",
+    "dueDate": "2024-06-19",
+    "priority": "medium",
+    "category": "maintenance",
+    "completed": false,
+    "fieldId": 2
+  },
+  {
+    "Id": 10,
+    "title": "Greenhouse Maintenance",
+    "description": "Clean and organize greenhouse for next planting",
+    "dueDate": "2024-06-30",
+    "priority": "low",
+    "category": "maintenance",
+    "completed": false,
+    "fieldId": null
+  }
+]

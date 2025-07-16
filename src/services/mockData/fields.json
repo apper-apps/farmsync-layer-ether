@@ -1,0 +1,56 @@
+[
+  {
+    "Id": 1,
+    "name": "North Field",
+    "size": 2.5,
+    "unit": "acres",
+    "status": "healthy",
+    "soilType": "Loamy",
+    "location": "North Section"
+  },
+  {
+    "Id": 2,
+    "name": "South Field",
+    "size": 3.2,
+    "unit": "acres",
+    "status": "growing",
+    "soilType": "Clay",
+    "location": "South Section"
+  },
+  {
+    "Id": 3,
+    "name": "East Field",
+    "size": 1.8,
+    "unit": "acres",
+    "status": "harvested",
+    "soilType": "Sandy",
+    "location": "East Section"
+  },
+  {
+    "Id": 4,
+    "name": "West Field",
+    "size": 2.0,
+    "unit": "acres",
+    "status": "fallow",
+    "soilType": "Loamy",
+    "location": "West Section"
+  },
+  {
+    "Id": 5,
+    "name": "Central Field",
+    "size": 4.1,
+    "unit": "acres",
+    "status": "maintenance",
+    "soilType": "Clay",
+    "location": "Central Section"
+  },
+  {
+    "Id": 6,
+    "name": "Upper Field",
+    "size": 1.5,
+    "unit": "acres",
+    "status": "healthy",
+    "soilType": "Sandy",
+    "location": "Upper Section"
+  }
+]

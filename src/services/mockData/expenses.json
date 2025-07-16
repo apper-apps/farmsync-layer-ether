@@ -1,0 +1,42 @@
+[
+  {
+    "Id": 1,
+    "category": "Seeds",
+    "amount": 350.00,
+    "date": "2024-03-15",
+    "description": "Tomato seeds for North Field",
+    "cropId": 1
+  },
+  {
+    "Id": 2,
+    "category": "Fertilizer",
+    "amount": 125.50,
+    "date": "2024-04-01",
+    "description": "Nitrogen fertilizer for corn",
+    "cropId": 2
+  },
+  {
+    "Id": 3,
+    "category": "Equipment",
+    "amount": 450.00,
+    "date": "2024-02-28",
+    "description": "Irrigation system repairs",
+    "cropId": null
+  },
+  {
+    "Id": 4,
+    "category": "Seeds",
+    "amount": 85.00,
+    "date": "2024-03-20",
+    "description": "Pepper seeds",
+    "cropId": 4
+  },
+  {
+    "Id": 5,
+    "category": "Pesticides",
+    "amount": 65.75,
+    "date": "2024-04-15",
+    "description": "Organic pest control",
+    "cropId": 1
+  }
+]

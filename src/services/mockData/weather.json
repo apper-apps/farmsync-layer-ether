@@ -1,0 +1,48 @@
+{
+  "current": {
+    "temperature": 24,
+    "condition": "sunny",
+    "humidity": 65,
+    "windSpeed": 12,
+    "visibility": 10,
+    "pressure": 1013,
+    "location": "Green Valley Farm"
+  },
+  "forecast": [
+    {
+      "date": "2024-06-15",
+      "high": 26,
+      "low": 18,
+      "condition": "sunny",
+      "precipitation": 10
+    },
+    {
+      "date": "2024-06-16",
+      "high": 28,
+      "low": 20,
+      "condition": "cloudy",
+      "precipitation": 25
+    },
+    {
+      "date": "2024-06-17",
+      "high": 23,
+      "low": 16,
+      "condition": "rainy",
+      "precipitation": 80
+    },
+    {
+      "date": "2024-06-18",
+      "high": 25,
+      "low": 17,
+      "condition": "cloudy",
+      "precipitation": 40
+    },
+    {
+      "date": "2024-06-19",
+      "high": 27,
+      "low": 19,
+      "condition": "sunny",
+      "precipitation": 5
+    }
+  ]
+}

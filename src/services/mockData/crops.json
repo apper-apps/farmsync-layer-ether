@@ -1,0 +1,82 @@
+[
+  {
+    "Id": 1,
+    "fieldId": 1,
+    "variety": "Tomatoes",
+    "plantingDate": "2024-03-15",
+    "expectedHarvest": "2024-07-15",
+    "actualHarvest": null,
+    "yield": null,
+    "status": "growing"
+  },
+  {
+    "Id": 2,
+    "fieldId": 2,
+    "variety": "Corn",
+    "plantingDate": "2024-04-01",
+    "expectedHarvest": "2024-08-01",
+    "actualHarvest": null,
+    "yield": null,
+    "status": "growing"
+  },
+  {
+    "Id": 3,
+    "fieldId": 3,
+    "variety": "Wheat",
+    "plantingDate": "2024-02-01",
+    "expectedHarvest": "2024-06-01",
+    "actualHarvest": "2024-05-28",
+    "yield": 450,
+    "status": "harvested"
+  },
+  {
+    "Id": 4,
+    "fieldId": 1,
+    "variety": "Peppers",
+    "plantingDate": "2024-03-20",
+    "expectedHarvest": "2024-07-20",
+    "actualHarvest": null,
+    "yield": null,
+    "status": "growing"
+  },
+  {
+    "Id": 5,
+    "fieldId": 2,
+    "variety": "Soybeans",
+    "plantingDate": "2024-04-10",
+    "expectedHarvest": "2024-09-10",
+    "actualHarvest": null,
+    "yield": null,
+    "status": "planted"
+  },
+  {
+    "Id": 6,
+    "fieldId": 6,
+    "variety": "Lettuce",
+    "plantingDate": "2024-03-01",
+    "expectedHarvest": "2024-05-01",
+    "actualHarvest": "2024-04-25",
+    "yield": 125,
+    "status": "harvested"
+  },
+  {
+    "Id": 7,
+    "fieldId": 6,
+    "variety": "Carrots",
+    "plantingDate": "2024-02-15",
+    "expectedHarvest": "2024-06-15",
+    "actualHarvest": "2024-06-10",
+    "yield": 275,
+    "status": "harvested"
+  },
+  {
+    "Id": 8,
+    "fieldId": 1,
+    "variety": "Cucumbers",
+    "plantingDate": "2024-04-05",
+    "expectedHarvest": "2024-07-05",
+    "actualHarvest": null,
+    "yield": null,
+    "status": "growing"
+  }
+]
