@@ -71,9 +71,9 @@ const ReportsDashboard = () => {
   }, {});
 
   return (
-    <div className="space-y-6">
+<div className="space-y-5">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
         <div>
           <h2 className="text-2xl font-bold text-gray-900">Reports & Analytics</h2>
           <p className="text-gray-600">Comprehensive insights into your farm operations</p>
@@ -91,9 +91,9 @@ const ReportsDashboard = () => {
       </div>
 
       {/* Key Metrics */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <Card>
-          <CardContent className="p-6">
+          <CardContent className="p-5">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-gray-600">Total Fields</p>
@@ -162,7 +162,7 @@ const ReportsDashboard = () => {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="space-y-4">
+<div className="space-y-3">
             {fieldStatusData.map((item) => (
               <div key={item.status} className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
@@ -190,7 +190,7 @@ const ReportsDashboard = () => {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="space-y-4">
+<div className="space-y-3">
             {Object.entries(cropVarieties).map(([variety, count]) => (
               <div key={variety} className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
@@ -220,7 +220,7 @@ const ReportsDashboard = () => {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="space-y-4">
+<div className="space-y-3">
             {Object.entries(taskCategories).map(([category, count]) => (
               <div key={category} className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
@@ -251,9 +251,9 @@ const ReportsDashboard = () => {
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="p-4 bg-success/10 rounded-6">
-                <h4 className="font-medium text-success mb-2">Completed This Week</h4>
+                <h4 className="font-medium text-success mb-1">Completed This Week</h4>
                 <p className="text-2xl font-bold text-success">{completedTasks}</p>
                 <p className="text-sm text-gray-600">Tasks completed</p>
               </div>

@@ -78,9 +78,9 @@ const DashboardOverview = () => {
     .slice(0, 5);
 
   return (
-    <div className="space-y-6">
+<div className="space-y-5">
       {/* Stats Overview */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <StatCard
           title="Active Fields"
           value={activeFields}
@@ -115,8 +115,8 @@ const DashboardOverview = () => {
         />
       </div>
 
-      {/* Weather and Quick Actions */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+{/* Weather and Quick Actions */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         <div className="lg:col-span-2">
           {weather && <WeatherCard weather={weather} />}
         </div>
@@ -127,7 +127,7 @@ const DashboardOverview = () => {
               Quick Actions
             </CardTitle>
           </CardHeader>
-          <CardContent className="space-y-3">
+<CardContent className="space-y-2">
             <Button variant="primary" className="w-full justify-start">
               <ApperIcon name="Plus" size={16} className="mr-2" />
               Add New Field
@@ -161,9 +161,9 @@ const DashboardOverview = () => {
             </Button>
           </CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4">
+<CardContent className="space-y-3">
           {upcomingTasks.length === 0 ? (
-            <div className="text-center py-8 text-gray-500">
+            <div className="text-center py-6 text-gray-500">
               <ApperIcon name="CheckCircle" size={48} className="mx-auto mb-4 text-success" />
               <p>No pending tasks! Great job!</p>
             </div>
@@ -189,8 +189,8 @@ const DashboardOverview = () => {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="space-y-4">
-            <div className="flex items-center space-x-3 py-2">
+<div className="space-y-3">
+            <div className="flex items-center space-x-3 py-1">
               <div className="w-8 h-8 rounded-full bg-success flex items-center justify-center">
                 <ApperIcon name="Check" size={16} className="text-white" />
               </div>

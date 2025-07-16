@@ -17,10 +17,10 @@ const StatCard = ({
 
   return (
     <Card className={cn("card-hover", className)}>
-      <CardContent className="p-6">
+<CardContent className="p-5">
         <div className="flex items-center justify-between">
           <div className="flex-1">
-            <p className="text-sm font-medium text-gray-600 mb-1">{title}</p>
+            <p className="text-sm font-medium text-gray-600 mb-0.5">{title}</p>
             <p className={cn(
               "text-2xl font-bold",
               gradient ? "text-gradient" : "text-gray-900"
@@ -28,7 +28,7 @@ const StatCard = ({
               {value}
             </p>
             {change && (
-              <div className={cn("flex items-center mt-2 text-sm", changeColor)}>
+              <div className={cn("flex items-center mt-1 text-sm", changeColor)}>
                 <ApperIcon name={changeIcon} size={16} className="mr-1" />
                 {change}
               </div>

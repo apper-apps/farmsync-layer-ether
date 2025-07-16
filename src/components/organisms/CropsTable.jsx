@@ -70,9 +70,9 @@ const CropsTable = () => {
   if (error) return <Error message={error} onRetry={loadData} />;
 
   return (
-    <div className="space-y-6">
+<div className="space-y-4">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
         <div>
           <h2 className="text-2xl font-bold text-gray-900">Crops</h2>
           <p className="text-gray-600">Track your crop varieties and monitor their growth</p>
@@ -85,8 +85,8 @@ const CropsTable = () => {
 
       {/* Search and Filters */}
       <Card>
-        <CardContent className="p-4">
-          <div className="flex flex-col sm:flex-row gap-4">
+<CardContent className="p-4">
+          <div className="flex flex-col sm:flex-row gap-2">
             <SearchBar
               placeholder="Search crops..."
               value={searchTerm}
@@ -122,51 +122,51 @@ const CropsTable = () => {
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="border-b border-gray-200">
-                    <th className="text-left py-3 px-4 font-medium text-gray-600">Variety</th>
-                    <th className="text-left py-3 px-4 font-medium text-gray-600">Field</th>
-                    <th className="text-left py-3 px-4 font-medium text-gray-600">Status</th>
-                    <th className="text-left py-3 px-4 font-medium text-gray-600">Planted</th>
-                    <th className="text-left py-3 px-4 font-medium text-gray-600">Expected Harvest</th>
-                    <th className="text-left py-3 px-4 font-medium text-gray-600">Yield</th>
-                    <th className="text-left py-3 px-4 font-medium text-gray-600">Actions</th>
+<tr className="border-b border-gray-200">
+                    <th className="text-left py-2 px-3 font-medium text-gray-600">Variety</th>
+                    <th className="text-left py-2 px-3 font-medium text-gray-600">Field</th>
+                    <th className="text-left py-2 px-3 font-medium text-gray-600">Status</th>
+                    <th className="text-left py-2 px-3 font-medium text-gray-600">Planted</th>
+                    <th className="text-left py-2 px-3 font-medium text-gray-600">Expected Harvest</th>
+                    <th className="text-left py-2 px-3 font-medium text-gray-600">Yield</th>
+                    <th className="text-left py-2 px-3 font-medium text-gray-600">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
                   {filteredCrops.map(crop => (
-                    <tr key={crop.Id} className="table-row border-b border-gray-100">
-                      <td className="py-3 px-4">
+<tr key={crop.Id} className="table-row border-b border-gray-100">
+                      <td className="py-2 px-3">
                         <div className="flex items-center">
-                          <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center mr-3">
+                          <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center mr-2">
                             <ApperIcon name="Sprout" size={16} className="text-white" />
                           </div>
                           <div>
                             <p className="font-medium text-gray-900">{crop.variety}</p>
-                            <p className="text-sm text-gray-500">ID: {crop.Id}</p>
+                            <p className="text-xs text-gray-500">ID: {crop.Id}</p>
                           </div>
                         </div>
                       </td>
-                      <td className="py-3 px-4">
+<td className="py-2 px-3">
                         <span className="font-medium text-gray-900">{getFieldName(crop.fieldId)}</span>
                       </td>
-                      <td className="py-3 px-4">
+                      <td className="py-2 px-3">
                         <Badge variant={getStatusVariant(crop.status)}>
                           {crop.status}
                         </Badge>
                       </td>
-                      <td className="py-3 px-4">
+                      <td className="py-2 px-3">
                         <span className="text-gray-900">{format(new Date(crop.plantingDate), "MMM dd, yyyy")}</span>
                       </td>
-                      <td className="py-3 px-4">
+                      <td className="py-2 px-3">
                         <span className="text-gray-900">{format(new Date(crop.expectedHarvest), "MMM dd, yyyy")}</span>
                       </td>
-                      <td className="py-3 px-4">
+                      <td className="py-2 px-3">
                         <span className="font-medium text-gray-900">
                           {crop.yield ? `${crop.yield} kg` : "—"}
                         </span>
                       </td>
-                      <td className="py-3 px-4">
-                        <div className="flex items-center gap-2">
+                      <td className="py-2 px-3">
+                        <div className="flex items-center gap-1">
                           <Button variant="ghost" size="sm" className="p-1">
                             <ApperIcon name="Edit" size={16} />
                           </Button>
@@ -188,7 +188,7 @@ const CropsTable = () => {
       )}
 
       {/* Summary Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         <Card>
           <CardContent className="p-4">
             <div className="flex items-center justify-between">

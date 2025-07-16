@@ -33,8 +33,8 @@ const FormField = ({
     return <Input type={type} {...props} className={cn(error && "form-error")} />;
   };
 
-  return (
-    <div className={cn("space-y-1", className)}>
+return (
+    <div className={cn("space-y-0.5", className)}>
       {label && <Label>{label}</Label>}
       {renderInput()}
       {error && <p className="text-sm text-error">{error}</p>}

@@ -91,9 +91,9 @@ const WeatherDashboard = () => {
   const recommendation = getWeatherRecommendation(currentWeather);
 
   return (
-    <div className="space-y-6">
+<div className="space-y-5">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
         <div>
           <h2 className="text-2xl font-bold text-gray-900">Weather Dashboard</h2>
           <p className="text-gray-600">Stay informed about weather conditions for optimal farming</p>
@@ -101,7 +101,7 @@ const WeatherDashboard = () => {
       </div>
 
       {/* Current Weather */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <WeatherCard weather={currentWeather} />
         
         {/* Weather Recommendation */}
@@ -143,9 +143,9 @@ const WeatherDashboard = () => {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-3">
             {forecast.map((day, index) => (
-              <div key={index} className="text-center p-4 rounded-6 bg-gray-50 hover:bg-gray-100 transition-colors">
+              <div key={index} className="text-center p-3 rounded-6 bg-gray-50 hover:bg-gray-100 transition-colors">
                 <p className="text-sm font-medium text-gray-700 mb-2">
                   {format(new Date(day.date), "EEE, MMM d")}
                 </p>
@@ -163,7 +163,7 @@ const WeatherDashboard = () => {
       </Card>
 
       {/* Weather Details */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center">
@@ -172,7 +172,7 @@ const WeatherDashboard = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="space-y-4">
+<div className="space-y-3">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
                   <ApperIcon name="Wind" size={18} className="text-gray-600" />

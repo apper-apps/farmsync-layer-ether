@@ -39,21 +39,21 @@ const WeatherCard = ({ weather, className }) => {
   return (
     <Card className={cn("overflow-hidden", className)}>
       <CardContent className="p-0">
-        <div className={cn("p-6 text-white", getWeatherGradient(weather.condition))}>
+<div className={cn("p-5 text-white", getWeatherGradient(weather.condition))}>
           <div className="flex items-center justify-between">
             <div>
-              <h3 className="text-lg font-semibold mb-1">Current Weather</h3>
+              <h3 className="text-lg font-semibold mb-0.5">Current Weather</h3>
               <p className="text-sm opacity-90">{weather.location}</p>
             </div>
             <ApperIcon name={getWeatherIcon(weather.condition)} size={32} className="text-white" />
           </div>
           
-          <div className="mt-4 flex items-center justify-between">
+<div className="mt-3 flex items-center justify-between">
             <div>
               <p className="text-3xl font-bold">{weather.temperature}°C</p>
               <p className="text-sm opacity-90 capitalize">{weather.condition}</p>
             </div>
-            <div className="text-right text-sm opacity-90">
+            <div className="text-right text-sm opacity-90 space-y-0.5">
               <p>Humidity: {weather.humidity}%</p>
               <p>Wind: {weather.windSpeed} km/h</p>
             </div>

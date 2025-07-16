@@ -41,9 +41,9 @@ const TaskItem = ({ task, onComplete, onEdit, className }) => {
 
   return (
     <Card className={cn("card-hover", task.completed && "opacity-60", className)}>
-      <CardContent className="p-4">
-        <div className="flex items-start justify-between mb-3">
-          <div className="flex items-center space-x-3">
+<CardContent className="p-4">
+        <div className="flex items-start justify-between mb-2">
+          <div className="flex items-center space-x-2">
             <div className={cn(
               "w-8 h-8 rounded-full flex items-center justify-center",
               task.completed ? "bg-success" : "bg-gray-200"
@@ -65,7 +65,7 @@ const TaskItem = ({ task, onComplete, onEdit, className }) => {
             </div>
           </div>
           
-          <div className="flex items-center space-x-2">
+<div className="flex items-center space-x-1">
             <Badge variant={getPriorityVariant(task.priority)}>
               {task.priority}
             </Badge>
@@ -83,7 +83,7 @@ const TaskItem = ({ task, onComplete, onEdit, className }) => {
         </div>
         
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-4 text-sm text-gray-600">
+<div className="flex items-center space-x-3 text-sm text-gray-600">
             <div className="flex items-center">
               <ApperIcon name="Calendar" size={14} className="mr-1" />
               <span className={cn(isOverdue && "text-error font-medium")}>

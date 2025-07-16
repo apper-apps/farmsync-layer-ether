@@ -86,9 +86,9 @@ const TasksList = () => {
   if (error) return <Error message={error} onRetry={loadData} />;
 
   return (
-    <div className="space-y-6">
+<div className="space-y-4">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
         <div>
           <h2 className="text-2xl font-bold text-gray-900">Tasks</h2>
           <p className="text-gray-600">Manage your daily farm operations and track progress</p>
@@ -100,9 +100,9 @@ const TasksList = () => {
       </div>
 
       {/* Search and Filters */}
-      <Card>
+<Card>
         <CardContent className="p-4">
-          <div className="flex flex-col lg:flex-row gap-4">
+          <div className="flex flex-col lg:flex-row gap-2">
             <SearchBar
               placeholder="Search tasks..."
               value={searchTerm}
@@ -157,7 +157,7 @@ const TasksList = () => {
       )}
 
       {/* Summary Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         <Card>
           <CardContent className="p-4">
             <div className="flex items-center justify-between">

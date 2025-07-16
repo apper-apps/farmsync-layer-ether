@@ -61,19 +61,18 @@ const FieldStatusCard = ({ field, onClick, className }) => {
       className={cn("card-hover cursor-pointer", className)}
       onClick={onClick}
     >
-      <CardContent className="p-6">
-        <div className="flex items-center justify-between mb-4">
+<CardContent className="p-5">
+        <div className="flex items-center justify-between mb-3">
           <h3 className="text-lg font-semibold text-gray-900">{field.name}</h3>
           <Badge variant={getStatusBadgeVariant(field.status)}>
             {field.status}
           </Badge>
         </div>
-        
-        <div className={cn("w-full h-32 rounded-6 mb-4 flex items-center justify-center", getStatusColor(field.status))}>
+<div className={cn("w-full h-32 rounded-6 mb-3 flex items-center justify-center", getStatusColor(field.status))}>
           <ApperIcon name={getStatusIcon(field.status)} size={48} className="text-white" />
         </div>
         
-        <div className="space-y-2">
+        <div className="space-y-1">
           <div className="flex justify-between text-sm">
             <span className="text-gray-600">Size:</span>
             <span className="font-medium">{field.size} {field.unit}</span>

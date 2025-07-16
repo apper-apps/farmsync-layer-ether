@@ -48,9 +48,9 @@ const FieldsGrid = () => {
   if (error) return <Error message={error} onRetry={loadFields} />;
 
   return (
-    <div className="space-y-6">
+<div className="space-y-4">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
         <div>
           <h2 className="text-2xl font-bold text-gray-900">Fields</h2>
           <p className="text-gray-600">Manage your farm fields and monitor their status</p>
@@ -63,8 +63,8 @@ const FieldsGrid = () => {
 
       {/* Search and Filters */}
       <Card>
-        <CardContent className="p-4">
-          <div className="flex flex-col sm:flex-row gap-4">
+<CardContent className="p-4">
+          <div className="flex flex-col sm:flex-row gap-2">
             <SearchBar
               placeholder="Search fields..."
               value={searchTerm}
@@ -95,7 +95,7 @@ const FieldsGrid = () => {
           onAction={() => console.log("Add new field")}
         />
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {filteredFields.map(field => (
             <FieldStatusCard
               key={field.Id}
@@ -115,10 +115,10 @@ const FieldsGrid = () => {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+<div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             <div className="text-center">
               <p className="text-2xl font-bold text-success">{fields.filter(f => f.status === "healthy").length}</p>
-              <p className="text-sm text-gray-600">Healthy</p>
+              <p className="text-xs text-gray-600">Healthy</p>
             </div>
             <div className="text-center">
               <p className="text-2xl font-bold text-info">{fields.filter(f => f.status === "growing").length}</p>
