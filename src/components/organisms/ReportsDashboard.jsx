@@ -167,9 +167,9 @@ const ReportsDashboard = () => {
               <div key={item.status} className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
                   <div className={`w-4 h-4 rounded-full ${item.color.replace('text-', 'bg-')}`} />
-                  <span className="text-sm font-medium">{item.status}</span>
+<span className="text-sm font-medium">{item.status}</span>
                 </div>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-1 md:space-x-1">
                   <span className="text-sm text-gray-600">{item.count} fields</span>
                   <span className={`text-sm font-medium ${item.color}`}>
                     {totalFields > 0 ? Math.round((item.count / totalFields) * 100) : 0}%
