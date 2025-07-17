@@ -33,10 +33,10 @@ const FieldsGrid = () => {
     loadFields();
   }, []);
 
-  const filteredFields = fields.filter(field =>
-    field.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    field.location.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    field.status.toLowerCase().includes(searchTerm.toLowerCase())
+const filteredFields = fields.filter(field =>
+    field.Name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    field.location?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    field.status?.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   const handleFieldClick = (field) => {

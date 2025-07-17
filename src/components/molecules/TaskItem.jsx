@@ -37,7 +37,7 @@ const TaskItem = ({ task, onComplete, onEdit, className }) => {
     }
   };
 
-  const isOverdue = new Date(task.dueDate) < new Date() && !task.completed;
+const isOverdue = new Date(task.due_date) < new Date() && !task.completed;
 
   return (
     <Card className={cn("card-hover", task.completed && "opacity-60", className)}>
@@ -85,9 +85,9 @@ const TaskItem = ({ task, onComplete, onEdit, className }) => {
         <div className="flex items-center justify-between">
 <div className="flex items-center space-x-3 text-sm text-gray-600">
             <div className="flex items-center">
-              <ApperIcon name="Calendar" size={14} className="mr-1" />
+<ApperIcon name="Calendar" size={14} className="mr-1" />
               <span className={cn(isOverdue && "text-error font-medium")}>
-                {format(new Date(task.dueDate), "MMM dd, yyyy")}
+                {format(new Date(task.due_date), "MMM dd, yyyy")}
               </span>
             </div>
             <div className="flex items-center">

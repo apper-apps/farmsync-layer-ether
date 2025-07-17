@@ -1,51 +1,168 @@
-import fieldsData from "@/services/mockData/fields.json";
+const { ApperClient } = window.ApperSDK;
 
-const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+const apperClient = new ApperClient({
+  apperProjectId: import.meta.env.VITE_APPER_PROJECT_ID,
+  apperPublicKey: import.meta.env.VITE_APPER_PUBLIC_KEY
+});
 
 export const fieldsService = {
   async getAll() {
-    await delay(300);
-    return [...fieldsData];
+    try {
+      const params = {
+        fields: [
+          { field: { Name: "Name" } },
+          { field: { Name: "Tags" } },
+          { field: { Name: "Owner" } },
+          { field: { Name: "size" } },
+          { field: { Name: "unit" } },
+          { field: { Name: "status" } },
+          { field: { Name: "soil_type" } },
+          { field: { Name: "location" } }
+        ]
+      };
+      
+      const response = await apperClient.fetchRecords('field', params);
+      
+      if (!response.success) {
+        console.error(response.message);
+        throw new Error(response.message);
+      }
+      
+      return response.data || [];
+    } catch (error) {
+      console.error("Error fetching fields:", error);
+      throw error;
+    }
   },
 
   async getById(id) {
-    await delay(200);
-    const field = fieldsData.find(f => f.Id === id);
-    if (!field) {
-      throw new Error("Field not found");
+    try {
+      const params = {
+        fields: [
+          { field: { Name: "Name" } },
+          { field: { Name: "Tags" } },
+          { field: { Name: "Owner" } },
+          { field: { Name: "size" } },
+          { field: { Name: "unit" } },
+          { field: { Name: "status" } },
+          { field: { Name: "soil_type" } },
+          { field: { Name: "location" } }
+        ]
+      };
+      
+      const response = await apperClient.getRecordById('field', id, params);
+      
+      if (!response.success) {
+        console.error(response.message);
+        throw new Error(response.message);
+      }
+      
+      return response.data;
+    } catch (error) {
+      console.error(`Error fetching field with ID ${id}:`, error);
+      throw error;
     }
-    return { ...field };
   },
 
   async create(fieldData) {
-    await delay(400);
-    const newField = {
-      ...fieldData,
-      Id: Math.max(...fieldsData.map(f => f.Id)) + 1
-    };
-    fieldsData.push(newField);
-    return { ...newField };
+    try {
+      const params = {
+        records: [{
+          Name: fieldData.Name,
+          Tags: fieldData.Tags,
+          Owner: fieldData.Owner,
+          size: fieldData.size,
+          unit: fieldData.unit,
+          status: fieldData.status,
+          soil_type: fieldData.soil_type,
+          location: fieldData.location
+        }]
+      };
+      
+      const response = await apperClient.createRecord('field', params);
+      
+      if (!response.success) {
+        console.error(response.message);
+        throw new Error(response.message);
+      }
+      
+      if (response.results) {
+        const successfulRecords = response.results.filter(result => result.success);
+        const failedRecords = response.results.filter(result => !result.success);
+        
+        if (failedRecords.length > 0) {
+          console.error(`Failed to create ${failedRecords.length} fields:${JSON.stringify(failedRecords)}`);
+          throw new Error("Failed to create field");
+        }
+        
+        return successfulRecords[0]?.data;
+      }
+    } catch (error) {
+      console.error("Error creating field:", error);
+      throw error;
+    }
   },
 
   async update(id, updates) {
-    await delay(300);
-    const index = fieldsData.findIndex(f => f.Id === id);
-    if (index === -1) {
-      throw new Error("Field not found");
+    try {
+      const params = {
+        records: [{
+          Id: id,
+          ...updates
+        }]
+      };
+      
+      const response = await apperClient.updateRecord('field', params);
+      
+      if (!response.success) {
+        console.error(response.message);
+        throw new Error(response.message);
+      }
+      
+      if (response.results) {
+        const successfulUpdates = response.results.filter(result => result.success);
+        const failedUpdates = response.results.filter(result => !result.success);
+        
+        if (failedUpdates.length > 0) {
+          console.error(`Failed to update ${failedUpdates.length} fields:${JSON.stringify(failedUpdates)}`);
+          throw new Error("Failed to update field");
+        }
+        
+        return successfulUpdates[0]?.data;
+      }
+    } catch (error) {
+      console.error("Error updating field:", error);
+      throw error;
     }
-    
-    fieldsData[index] = { ...fieldsData[index], ...updates };
-    return { ...fieldsData[index] };
   },
 
   async delete(id) {
-    await delay(300);
-    const index = fieldsData.findIndex(f => f.Id === id);
-    if (index === -1) {
-      throw new Error("Field not found");
+    try {
+      const params = {
+        RecordIds: [id]
+      };
+      
+      const response = await apperClient.deleteRecord('field', params);
+      
+      if (!response.success) {
+        console.error(response.message);
+        throw new Error(response.message);
+      }
+      
+      if (response.results) {
+        const successfulDeletions = response.results.filter(result => result.success);
+        const failedDeletions = response.results.filter(result => !result.success);
+        
+        if (failedDeletions.length > 0) {
+          console.error(`Failed to delete ${failedDeletions.length} fields:${JSON.stringify(failedDeletions)}`);
+          throw new Error("Failed to delete field");
+        }
+        
+        return successfulDeletions.length > 0;
+      }
+    } catch (error) {
+      console.error("Error deleting field:", error);
+      throw error;
     }
-    
-    const deletedField = fieldsData.splice(index, 1)[0];
-    return { ...deletedField };
   }
 };

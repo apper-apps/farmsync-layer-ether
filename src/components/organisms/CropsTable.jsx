@@ -40,9 +40,9 @@ const CropsTable = () => {
     loadData();
   }, []);
 
-  const getFieldName = (fieldId) => {
+const getFieldName = (fieldId) => {
     const field = fields.find(f => f.Id === fieldId);
-    return field ? field.name : "Unknown Field";
+    return field ? field.Name : "Unknown Field";
   };
 
   const getStatusVariant = (status) => {
@@ -60,10 +60,10 @@ const CropsTable = () => {
     }
   };
 
-  const filteredCrops = crops.filter(crop =>
-    crop.variety.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    getFieldName(crop.fieldId).toLowerCase().includes(searchTerm.toLowerCase()) ||
-    crop.status.toLowerCase().includes(searchTerm.toLowerCase())
+const filteredCrops = crops.filter(crop =>
+    crop.variety?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    getFieldName(crop.field_id?.Id || crop.field_id).toLowerCase().includes(searchTerm.toLowerCase()) ||
+    crop.status?.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   if (loading) return <Loading />;
@@ -147,18 +147,18 @@ const CropsTable = () => {
                         </div>
                       </td>
 <td className="py-2 px-3">
-                        <span className="font-medium text-gray-900">{getFieldName(crop.fieldId)}</span>
+                        <span className="font-medium text-gray-900">{getFieldName(crop.field_id?.Id || crop.field_id)}</span>
                       </td>
                       <td className="py-2 px-3">
                         <Badge variant={getStatusVariant(crop.status)}>
                           {crop.status}
                         </Badge>
                       </td>
-                      <td className="py-2 px-3">
-                        <span className="text-gray-900">{format(new Date(crop.plantingDate), "MMM dd, yyyy")}</span>
+<td className="py-2 px-3">
+                        <span className="text-gray-900">{format(new Date(crop.planting_date), "MMM dd, yyyy")}</span>
                       </td>
                       <td className="py-2 px-3">
-                        <span className="text-gray-900">{format(new Date(crop.expectedHarvest), "MMM dd, yyyy")}</span>
+                        <span className="text-gray-900">{format(new Date(crop.expected_harvest), "MMM dd, yyyy")}</span>
                       </td>
                       <td className="py-2 px-3">
                         <span className="font-medium text-gray-900">

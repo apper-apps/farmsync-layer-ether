@@ -60,11 +60,10 @@ const TasksList = () => {
     // This would typically open a modal or navigate to edit page
   };
 
-  const filteredTasks = tasks.filter(task => {
-    const matchesSearch = task.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         task.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         task.category.toLowerCase().includes(searchTerm.toLowerCase());
-    
+const filteredTasks = tasks.filter(task => {
+    const matchesSearch = task.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         task.description?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         task.category?.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesStatus = filterStatus === "all" || 
                          (filterStatus === "completed" && task.completed) ||
                          (filterStatus === "pending" && !task.completed);
@@ -74,12 +73,12 @@ const TasksList = () => {
     return matchesSearch && matchesStatus && matchesPriority;
   });
 
-  const sortedTasks = filteredTasks.sort((a, b) => {
+const sortedTasks = filteredTasks.sort((a, b) => {
     // Sort by completion status first, then by due date
     if (a.completed !== b.completed) {
       return a.completed ? 1 : -1;
     }
-    return new Date(a.dueDate) - new Date(b.dueDate);
+    return new Date(a.due_date) - new Date(b.due_date);
   });
 
   if (loading) return <Loading />;

@@ -72,9 +72,9 @@ const DashboardOverview = () => {
   const activeFields = fields.filter(field => field.status !== "fallow").length;
   const activeCrops = crops.filter(crop => crop.status === "growing").length;
   const pendingTasks = tasks.filter(task => !task.completed).length;
-  const upcomingTasks = tasks
+const upcomingTasks = tasks
     .filter(task => !task.completed)
-    .sort((a, b) => new Date(a.dueDate) - new Date(b.dueDate))
+    .sort((a, b) => new Date(a.due_date) - new Date(b.due_date))
     .slice(0, 5);
 
   return (
